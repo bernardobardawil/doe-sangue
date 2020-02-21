@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--HTML
+
+HYPERTEXT
+texto que contém links para outros documentos.
+
+MARKUP
+texto conterá marcações
+<tags>
+
+LANGUAGE
+Para me comunicar de certa maneira. Sintaxe específica
+para escrita.
+
+-->
+
+<html>
+    <head>
+        <!--São configurações da minha página-->
+        <title>Doe sangue! Doe vida</title>
+    </head>
+
+    <body>
+        <!--Aqui vem todo o conteúdo visível para o usuário, dentro
+        de certa página-->
+        <header>Conteúdo do topo</header>
+        <section>Formulário</section>
+        <main>Conteúdo central</main>
+        <footer>Rodapé</footer>
+    </body>
+
+
+
+</html>

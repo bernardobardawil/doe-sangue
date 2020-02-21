@@ -1,0 +1,210 @@
+/*
+GLOBAL
+*/
+*{
+    /*corrigindo comportamento padrão css*/
+    box-sizing: border-box;
+}
+
+html, body {
+    /*zerando toda a margem*/
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    /*altura de 100% view port heigth - view port, é tudo que estamos vendo na tela. o heigth é a altura*/
+    height: 100vh;
+
+    /*fonte que peguei no google font - copiei o link css e colei*/
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    color: #000000cc;
+}
+
+/*TITULOS*/
+header h1, main h2 {
+    margin-bottom: 70px;
+}
+
+main h2 span {
+    color: #ff4f4f;
+}
+
+.form h2{
+    text-align: right;
+    color: #ffffffee;
+    font-size: 18px;
+}
+
+/* ESTRUTURA - ALINHAMENTOS, ESPAÇAMENTOS
+LARGURA E ALTURAS */
+header, main, footer {
+    /*ALINHAMENTO DE TEXTOS*/
+    text-align: center;
+}
+
+header, section.form, main {
+    /*ESPAÇAMENTOS com margin*/
+    margin: 0 auto 70px auto;
+
+    /*LIMITES DOS ELEMENTOS NA PÁGINA*/
+    width: 90%;
+    max-width: 500PX;
+
+}
+
+/*HEADER*/
+header button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+
+    /*cor do fundo*/
+    background-color: #ff4f4f;
+
+    /*cor do texto*/
+    color: white;
+
+    /*fonte em negrito*/
+    font-weight: bold;
+}
+
+.logo {
+    width: 120px;
+    margin-top: 70px 0;
+}
+
+header p {
+    font-size: 14px;
+}
+
+/*FORM*/
+section.form {
+    display: grid;
+
+    /*duas colunas fracionadas e flexíveis*/
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+
+    /*Alinha (os itens de dentro ao centro) o eixo x e y ao centro*/
+    align-items: center;
+
+    background-color: #ff4f4f;
+
+    padding: 16px 64px;
+    
+    /*borda arredondada*/
+    border-radius: 6px;
+}
+
+form input, form button {
+
+    /*largura*/
+    width: 100%;
+
+    /*espaçamento*/
+    margin-bottom: 4px;
+
+    /*o box vai ficar até a borda - ESTÀ CORRIGINDO O COMPORTAMENTO PADRÃO DO CSS*/
+    box-sizing: border-box;
+
+     /*preenchimento*/
+    padding: 8px 16px;
+
+    /*bordas*/
+   border-radius: 4px;
+
+   /*borda - espessura da linha e cor e estilo da borda*/
+    border: 1px #ffffff88 solid;
+}
+
+    form input {
+    background-color: transparent;
+}
+
+/*placeholder é como se fosse um pseudo elemento*/
+form input::placeholder {
+    color: #ffffffaa;
+}
+
+form button {
+    font-weight: bold;
+}
+
+
+
+
+/*MAIN*/
+main .donors {
+    /* Display - maneira como o css vai mostrar os elementos na página e Grid - maneira multi
+    dimensional de aparecer coisas, ex: em colunas em linhas... */
+    display:grid;
+
+    /*quatro colunas fracionadas e flexíveis*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.blood {
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+/*pseudo elemento - cria um elemento de nome "before", dentro da DIV blood */
+.blood::before {
+    content: "";
+    background-color: #ff4f4f11;
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+
+    /*fazer a gotinha*/
+    border-radius: 50%;
+    border-top-right-radius: 0;
+
+    transform: rotate(-45deg)
+}
+
+.donor p {
+    margin-top: 24px;
+    margin-bottom: 64px;
+    font-size: 14px;
+}
+
+/*footer*/
+footer {
+    margin-top: auto;
+
+    padding: 16px;
+
+    border: 1px solid #eee;
+}
+
+/*funcionalidades com javascript*/
+
+section.form {
+    transition: all 300ms;
+}
+
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}
